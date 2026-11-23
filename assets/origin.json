@@ -1,0 +1,10 @@
+{
+  "source": "https://github.com/nailiang002-wq/deepseek-girl-harness",
+  "version": "1.13.0",
+  "forms": [
+    "flash",
+    "pro"
+  ],
+  "outfits": 8,
+  "completeSourceFrames": 576
+}

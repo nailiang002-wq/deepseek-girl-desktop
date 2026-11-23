@@ -1,0 +1,100 @@
+.dsg-root[data-activity='pong'] > .dsg-character,
+.dsg-root[data-activity='pong'] > .dsg-footer {
+  visibility: hidden;
+}
+
+.dsg-pong {
+  position: fixed;
+  top: 50%;
+  z-index: 5;
+  translate: 0 -50%;
+  box-sizing: border-box;
+  max-height: calc(100dvh - 20px);
+  overflow: auto;
+  padding: 13px 14px 10px;
+  border: 1px solid #a9c4d7;
+  border-radius: 20px;
+  background: #fffbf3;
+  color: #315674;
+  box-shadow: 0 13px 35px #183b5f38, 0 2px 8px #163c571a;
+  font: 13px/1.4 'Microsoft YaHei', sans-serif;
+}
+
+.dsg-pong-header,
+.dsg-pong-tools,
+.dsg-pong-score,
+.dsg-pong-side {
+  display: flex;
+  align-items: center;
+}
+
+.dsg-pong-header { justify-content: space-between; gap: 10px; }
+.dsg-pong-header h2 { margin: 0; font: 24px/1.2 'DSG Greeting Hand', 'Microsoft YaHei', sans-serif; }
+.dsg-pong-tools { gap: 5px; }
+.dsg-pong-tool {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  padding: 6px;
+  border: 1px solid #c8d8e3;
+  border-radius: 10px;
+  background: #fffdf7;
+  color: #446c8e;
+  cursor: pointer;
+}
+.dsg-pong-tool svg { width: 17px; height: 17px; }
+.dsg-pong-tool:disabled { opacity: .45; cursor: default; }
+.dsg-pong-tool:not(:disabled):hover { background: #e6f4fb; }
+
+.dsg-pong-score {
+  justify-content: space-between;
+  gap: 6px;
+  margin: 8px 0;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #edf5f9;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.dsg-pong-side { gap: 6px; }
+.dsg-pong-side strong { font: 700 17px/1 'Segoe UI', sans-serif; font-variant-numeric: tabular-nums; }
+.dsg-pong-side i { width: 8px; height: 8px; border-radius: 50%; background: #df935c; }
+.dsg-pong-side[data-side='whale'] i { background: #58a2bc; }
+.dsg-pong-goal { color: #4d6d84; font-size: 11px; }
+
+.dsg-pong-field { position: relative; overflow: hidden; border: 1px solid #a6c3d7; border-radius: 13px; }
+.dsg-pong-court { display: block; width: 100%; height: auto; aspect-ratio: 448 / 304; touch-action: none; cursor: crosshair; }
+.dsg-pong-court:focus { outline: none; }
+.dsg-pong-court:focus-visible { outline: 2px solid #ffe8c8; outline-offset: -3px; }
+.dsg-pong-message {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: max-content;
+  max-width: calc(100% - 26px);
+  padding: 5px 6px 5px 11px;
+  border: 1px solid #f0e8db;
+  border-radius: 12px;
+  background: #fffbf3;
+  color: #305674;
+  box-shadow: 0 5px 22px #17375248;
+  pointer-events: none;
+}
+.dsg-pong-action {
+  pointer-events: auto;
+  padding: 5px 10px;
+  border: 1px solid #366382;
+  border-radius: 8px;
+  background: #396b8c;
+  color: #fff;
+  font: 600 12px/1.4 'Microsoft YaHei', sans-serif;
+  cursor: pointer;
+}
+.dsg-pong-action:hover { background: #2f5a7b; }
+.dsg-pong-action:focus-visible, .dsg-pong-tool:focus-visible { outline: 2px solid #477d9f; outline-offset: 2px; }
+.dsg-pong-hint { margin: 7px 0 0; color: #496a84; text-align: center; font-size: 11px; }

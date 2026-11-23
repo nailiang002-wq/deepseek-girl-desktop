@@ -1,0 +1,19 @@
+{
+  "poses": ["idle", "blink", "cheer", "pout", "sleep", "hold", "bite", "chew", "wipe", "step"],
+  "states": {
+    "idle": {"loop": true, "frames": [["idle", 2650], ["blink", 115], ["idle", 455]]},
+    "thinking": {"loop": true, "still": "wipe", "frames": [["wipe", 1350], ["blink", 120], ["wipe", 310]]},
+    "generating": {"loop": true, "frames": [["idle", 1020]]},
+    "success": {"loop": false, "frames": [["cheer", 1080], ["idle", 250]]},
+    "error": {"loop": true, "frames": [["pout", 2620]]},
+    "dragging": {"loop": true, "frames": [["step", 900]]},
+    "drop": {"loop": false, "frames": [["blink", 150], ["idle", 890]]},
+    "sleeping": {"loop": true, "frames": [["sleep", 2700]]},
+    "eating": {"loop": false, "repeat": 3, "frames": [["hold", 1300], ["bite", 600], ["chew", 1260], ["hold", 1200]]},
+    "aftermeal": {"loop": false, "still": "wipe", "frames": [["chew", 350], ["wipe", 1050], ["cheer", 650], ["idle", 1650]]},
+    "begging": {"loop": true, "frames": [["hold", 2300]]},
+    "petting": {"loop": false, "frames": [["blink", 390], ["cheer", 1100], ["idle", 310]]},
+    "pouting": {"loop": false, "frames": [["pout", 1800]]},
+    "walking": {"loop": true, "frames": [["step", 260], ["idle", 220]]}
+  }
+}

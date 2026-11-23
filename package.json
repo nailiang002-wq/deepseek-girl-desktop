@@ -1,0 +1,15 @@
+{
+  "name": "deepseek-girl-desktop",
+  "productName": "小鲸鱼桌宠",
+  "version": "0.5.0",
+  "private": true,
+  "description": "独立离线桌宠，支持 Flash / Pro 变身、换装、白饭和亲密度。",
+  "main": "main.cjs",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "package": "node scripts/package.cjs",
+    "test": "node tests/desktop.cjs"
+  },
+  "devDependencies": {"playwright": "1.62.1"},
+  "engines": {"node": ">=20"}
+}
